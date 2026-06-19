@@ -1,27 +1,74 @@
 ---
-src: ./Slide/Introduction/main.md
+src: ./slides/Introduction/Introduction.md
 ---
 
+<!-- Basic Syntax -->
 ---
-src: ./Slide/Operators/main.md
----
-
----
-src: ./Slide/Decision_making/main.md
+src: ./slides/BasicSyntax/BasicSyntax.md
 ---
 
+
+<!-- Comments -->
 ---
-src: ./Slide/Loops/main.md
+src: ./slides/Comments/Comments.md
 ---
 
+<!-- DataTypes -->
 ---
-src: ./Slide/Strings/main.md
----
-
----
-src: ./Slide/Data_structure/main.md
+src: ./slides/DataTypes/DataTypes.md
 ---
 
+<!-- Variables -->
 ---
-src: ./Slide/Recursion/main.md
+src: ./slides/Variables/Variables.md
+---
+
+<!-- Inputs -->
+---
+src: ./slides/Inputs/Inputs.md
+---
+
+<!-- Type casting -->
+---
+src: ./slides/Type_Casting/Type_Casting.md
+---
+
+<!-- Math Functions -->
+---
+src: ./slides/Math_Functions/Math_Functions.md
+---
+
+<!-- Operators -->
+---
+src: ./slides/Operators/Operators.md
+---
+
+<!-- Decision Making Statements -->
+---
+src: ./slides/DecisionMaking/DecisionMaking.md
+---
+
+<!-- Loops -->
+---
+src: ./slides/Loops/Loops.md
+---
+
+<!-- Arrays -->
+---
+src: ./slides/Arrays/Arrays.md
+---
+
+<!-- Strings -->
+---
+src: ./slides/Strings/Strings.md
+---
+
+<!-- Methods -->
+---
+src: ./slides/Methods/Methods.md
+---
+
+<!-- Recursion -->
+---
+src: ./slides/Recursion/Recursion.md
 ---

@@ -4,14 +4,16 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 import { sendWelcomeEmailInternal } from './send-welcome.js'
 
-// Your web app's Firebase configuration
+// Firebase project: faceprep-java-course
+// Migrated from: test-db-2647b
 const firebaseConfig = {
-  apiKey: "AIzaSyCBsNQ_QDJScHgMUv4blklp2fCACKtmzYQ",
-  authDomain: "test-db-2647b.firebaseapp.com",
-  projectId: "test-db-2647b",
-  storageBucket: "test-db-2647b.firebasestorage.app",
-  messagingSenderId: "593195733830",
-  appId: "1:593195733830:web:dcd89130dd877694d58b47"
+  apiKey: "AIzaSyDF6l9wGnSvyktk1KHVqybdLCqY7h17SLI",
+  authDomain: "faceprep-java-course.firebaseapp.com",
+  projectId: "faceprep-java-course",
+  storageBucket: "faceprep-java-course.firebasestorage.app",
+  messagingSenderId: "715209171436",
+  appId: "1:715209171436:web:4cfc3eca33c18b6d9f20c9",
+  measurementId: "G-V4PMG7R88E"
 }
 
 // Initialize Firebase
@@ -119,8 +121,8 @@ async function verifyGoogleToken(idToken) {
       return null
     }
     const payload = await response.json()
-    // Verify client ID matches
-    const expectedClientId = '207254417956-jmlljaaj6kp3p8am8rdsivmsk9i6r7eu.apps.googleusercontent.com'
+    // Verify client ID matches — must align with the client_id used in LoginOverlay.vue
+    const expectedClientId = '207254417956-99kjjdr12ea0b4vn6djtn7bgqtog82ds.apps.googleusercontent.com'
     if (payload.aud !== expectedClientId) {
       console.warn('Token aud does not match client ID')
       return null

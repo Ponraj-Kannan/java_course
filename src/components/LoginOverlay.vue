@@ -340,7 +340,7 @@ function initGoogleSignIn() {
       }
 
       window.google.accounts.id.initialize({
-        client_id: '207254417956-jmlljaaj6kp3p8am8rdsivmsk9i6r7eu.apps.googleusercontent.com',
+        client_id: '207254417956-99kjjdr12ea0b4vn6djtn7bgqtog82ds.apps.googleusercontent.com',
         callback: handleGoogleSignInCallback,
         auto_select: false
       })

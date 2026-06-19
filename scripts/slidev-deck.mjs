@@ -8,9 +8,13 @@ const root = process.cwd()
 const defaultDeck = 'src/01-introduction-to-java.md'
 const deck = deckArg || process.env.SLIDEV_DECK || defaultDeck
 const resolvedDeck = path.isAbsolute(deck) ? deck : path.join(root, deck)
-const slidevBin = process.platform === 'win32'
+const slidevBinRaw = process.platform === 'win32'
   ? path.join(root, 'node_modules', '.bin', 'slidev.cmd')
   : path.join(root, 'node_modules', '.bin', 'slidev')
+// On Windows with shell:true, wrap the binary path in quotes so that
+// parentheses in the project directory (e.g. Java_course_(zoho)) are not
+// treated as shell sub-expression delimiters.
+const slidevBin = process.platform === 'win32' ? `"${slidevBinRaw}"` : slidevBinRaw
 
 // Template system integration
 const templatesDir = path.join(root, 'templates')
@@ -48,9 +52,12 @@ if (!fs.existsSync(resolvedDeck)) {
 }
 
 // Enhanced arguments for better development experience
+// Also quote the deck path on Windows so parentheses in the path don't break
+// the shell command.
+const quotedDeck = process.platform === 'win32' ? `"${resolvedDeck}"` : resolvedDeck
 const baseArgs = action === 'build'
-  ? ['build', resolvedDeck, '--base', '/', ...extraArgs]
-  : [resolvedDeck, ...extraArgs]
+  ? ['build', quotedDeck, '--base', '/', ...extraArgs]
+  : [quotedDeck, ...extraArgs]
 
 // Add development-specific enhancements
 if (action === 'dev') {

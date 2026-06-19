@@ -1,35 +1,88 @@
+# ==========================================
 # Dependencies
-/node_modules/
+# ==========================================
+node_modules/
+/jspm_packages/
+/web_modules/
 
-# Scratch files (development testing/scratch scripts)
-/scratch/
-
-# Build outputs
+# ==========================================
+# Build & Output Directories
+# ==========================================
 /dist/
 /src/dist/
 /dev-dist/
+/out/
+/.cache/
+/.temp/
+/.tmp/
+/bin/
+/target/
 
-# Local configuration and credentials
-client_secret_*.json
-allowed-emails.json
+# ==========================================
+# Java Specific (for Java course files and compilations)
+# ==========================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+# Eclipse / IntelliJ / NetBeans project files
+.classpath
+.project
+.settings/
+.factorypath
+*.iml
+*.ipr
+*.iws
+nbproject/
+build/
+
+# ==========================================
+# Scratch files & Local workspace
+# ==========================================
+/scratch/
+
+# ==========================================
+# Environment & Local Configuration
+# ==========================================
 .env
 .env.local
 .env.*.local
+client_secret_*.json
+allowed-emails.json
 
-# Vercel configuration
+# ==========================================
+# Deployment & Hosting (Vercel, etc.)
+# ==========================================
 .vercel/
 
-# Logs
+# ==========================================
+# Logs & Diagnostic Reports
+# ==========================================
 *.log
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# System Files
+# ==========================================
+# OS / System Metadata
+# ==========================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Editor configurations
+# ==========================================
+# Editor Configurations
+# ==========================================
 .vscode/
 .idea/
 *.suo
@@ -37,3 +90,4 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+*~
